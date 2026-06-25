@@ -1,0 +1,1051 @@
+/* ================================
+        GOOGLE RESET
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+:root{
+
+    --primary:#2563eb;
+    --secondary:#0f172a;
+    --light:#f8fafc;
+    --white:#ffffff;
+    --gray:#64748b;
+    --border:#e2e8f0;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--light);
+
+    color:var(--secondary);
+
+    line-height:1.6;
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+}
+
+a{
+
+    text-decoration:none;
+}
+
+ul{
+
+    list-style:none;
+}
+
+
+/* ================================
+            NAVBAR
+================================ */
+
+header{
+
+    width:100%;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(10px);
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    z-index:999;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+}
+
+.navbar{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:20px 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:var(--primary);
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:35px;
+}
+
+.nav-links a{
+
+    color:var(--secondary);
+
+    font-weight:500;
+
+    transition:.3s;
+}
+
+.nav-links a:hover{
+
+    color:var(--primary);
+}
+
+.nav-btn{
+
+    padding:12px 24px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:8px;
+
+    transition:.3s;
+}
+
+.nav-btn:hover{
+
+    background:#1d4ed8;
+}
+
+
+/* ================================
+            HERO
+================================ */
+
+.hero{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:70px;
+
+    padding:140px 40px 60px;
+}
+
+.hero-left{
+
+    flex:1;
+}
+
+.hero-left h1{
+
+    font-size:60px;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+}
+
+.hero-left p{
+
+    color:var(--gray);
+
+    font-size:18px;
+
+    margin-bottom:35px;
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+}
+
+.primary-btn{
+
+    padding:15px 32px;
+
+    background:var(--primary);
+
+    color:white;
+
+    border-radius:8px;
+
+    transition:.3s;
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-4px);
+
+    background:#1d4ed8;
+}
+
+.secondary-btn{
+
+    padding:15px 32px;
+
+    border:2px solid var(--primary);
+
+    color:var(--primary);
+
+    border-radius:8px;
+
+    transition:.3s;
+}
+
+.secondary-btn:hover{
+
+    background:var(--primary);
+
+    color:white;
+}
+
+.hero-right{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+}
+
+.hero-right img{
+
+    width:520px;
+
+    animation:float 4s ease-in-out infinite;
+}
+
+
+/* ================================
+        COMMON SECTION
+================================ */
+
+section{
+
+    padding:90px 40px;
+}
+
+section h2{
+
+    text-align:center;
+
+    font-size:42px;
+
+    margin-bottom:60px;
+}
+
+
+/* ================================
+        ANIMATIONS
+================================ */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+    }
+
+    50%{
+
+        transform:translateY(-18px);
+    }
+
+    100%{
+
+        transform:translateY(0px);
+    }
+}
+
+.hero{
+
+    animation:fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+
+/* ================================
+        RESPONSIVE
+================================ */
+
+@media(max-width:1000px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+    }
+
+    .nav-links{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+    }
+
+    .hero{
+
+        flex-direction:column-reverse;
+
+        text-align:center;
+
+        padding-top:180px;
+    }
+
+    .hero-buttons{
+
+        justify-content:center;
+    }
+
+    .hero-left h1{
+
+        font-size:46px;
+    }
+
+    .hero-right img{
+
+        width:380px;
+    }
+}
+
+@media(max-width:700px){
+
+    .hero{
+
+        padding:170px 20px 50px;
+    }
+
+    section{
+
+        padding:70px 20px;
+    }
+
+    .hero-left h1{
+
+        font-size:36px;
+    }
+
+    .hero-left p{
+
+        font-size:16px;
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+    }
+
+    .primary-btn,
+    .secondary-btn{
+
+        width:100%;
+        text-align:center;
+    }
+
+    .hero-right img{
+
+        width:300px;
+    }
+
+    section h2{
+
+        font-size:34px;
+    }
+}
+
+/* ===================================
+        TRUSTED COMPANIES
+=================================== */
+
+.trusted{
+
+    background:white;
+}
+
+.companies{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-around;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:30px;
+}
+
+.companies div{
+
+    font-size:26px;
+
+    font-weight:600;
+
+    color:#94a3b8;
+
+    transition:.3s;
+}
+
+.companies div:hover{
+
+    color:var(--primary);
+
+    transform:translateY(-5px);
+}
+
+
+
+/* ===================================
+            FEATURES
+=================================== */
+
+.features{
+
+    background:#eef4ff;
+}
+
+.feature-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+}
+
+.feature-card{
+
+    background:white;
+
+    padding:40px 30px;
+
+    border-radius:16px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+}
+
+.feature-card:hover{
+
+    transform:translateY(-12px);
+
+    background:var(--primary);
+
+    color:white;
+}
+
+.feature-card h3{
+
+    margin-bottom:18px;
+
+    font-size:24px;
+}
+
+.feature-card p{
+
+    line-height:1.8;
+}
+
+
+
+/* ===================================
+        WORKFLOW
+=================================== */
+
+.workflow{
+
+    background:white;
+}
+
+.steps{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:35px;
+}
+
+.step{
+
+    text-align:center;
+
+    padding:35px;
+
+    border-radius:16px;
+
+    background:#f8fafc;
+
+    transition:.35s;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.06);
+}
+
+.step:hover{
+
+    transform:translateY(-10px);
+
+    background:#dbeafe;
+}
+
+.step h1{
+
+    font-size:60px;
+
+    color:var(--primary);
+
+    margin-bottom:15px;
+}
+
+.step h3{
+
+    margin-bottom:15px;
+
+    font-size:24px;
+}
+
+.step p{
+
+    color:var(--gray);
+}
+
+
+
+/* ===================================
+            PRICING
+=================================== */
+
+.pricing{
+
+    background:#eef4ff;
+}
+
+.pricing-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+}
+
+.price-card{
+
+    background:white;
+
+    padding:45px 30px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+}
+
+.price-card:hover{
+
+    transform:translateY(-10px);
+}
+
+.price-card h3{
+
+    font-size:26px;
+
+    margin-bottom:15px;
+}
+
+.price-card h1{
+
+    font-size:58px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+}
+
+.price-card p{
+
+    margin-bottom:30px;
+
+    color:var(--gray);
+}
+
+.price-card button{
+
+    padding:14px 32px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:var(--primary);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    transition:.3s;
+}
+
+.price-card button:hover{
+
+    background:#1d4ed8;
+}
+
+.popular{
+
+    background:linear-gradient(135deg,#2563eb,#1e3a8a);
+
+    color:white;
+
+    transform:scale(1.05);
+}
+
+.popular h1,
+.popular h3,
+.popular p{
+
+    color:white;
+}
+
+.popular button{
+
+    background:white;
+
+    color:var(--primary);
+
+    font-weight:600;
+}
+
+.popular button:hover{
+
+    background:#e2e8f0;
+}
+
+
+
+/* ===================================
+        SMALL RESPONSIVE FIX
+=================================== */
+
+@media(max-width:800px){
+
+    .companies{
+
+        gap:18px;
+    }
+
+    .companies div{
+
+        font-size:20px;
+    }
+
+    .step h1{
+
+        font-size:48px;
+    }
+
+    .price-card h1{
+
+        font-size:46px;
+    }
+
+}
+/* ===================================
+        TESTIMONIALS
+=================================== */
+
+.testimonials{
+    background:#ffffff;
+}
+
+.testimonial-container{
+
+    max-width:1100px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:30px;
+}
+
+.testimonial{
+
+    background:#f8fafc;
+
+    padding:35px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+    transition:.35s;
+}
+
+.testimonial:hover{
+
+    transform:translateY(-10px);
+}
+
+.testimonial p{
+
+    color:var(--gray);
+
+    font-size:17px;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+    font-style:italic;
+}
+
+.testimonial h4{
+
+    color:var(--primary);
+
+    font-size:20px;
+}
+
+
+
+/* ===================================
+            CONTACT
+=================================== */
+
+.contact{
+
+    background:#eef4ff;
+}
+
+.contact form{
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+}
+
+.contact input,
+.contact textarea{
+
+    width:100%;
+
+    padding:18px;
+
+    border:1px solid var(--border);
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    font-family:inherit;
+
+    outline:none;
+
+    transition:.3s;
+}
+
+.contact input:focus,
+.contact textarea:focus{
+
+    border-color:var(--primary);
+
+    box-shadow:0 0 12px rgba(37,99,235,.2);
+}
+
+.contact textarea{
+
+    resize:none;
+
+    min-height:170px;
+}
+
+.contact button{
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:var(--primary);
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.contact button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-3px);
+}
+
+
+
+/* ===================================
+            FOOTER
+=================================== */
+
+footer{
+
+    background:#0f172a;
+
+    color:white;
+
+    padding:50px 20px;
+
+    text-align:center;
+}
+
+.footer-content{
+
+    max-width:900px;
+
+    margin:auto;
+}
+
+.footer-content h2{
+
+    margin-bottom:20px;
+
+    color:#60a5fa;
+}
+
+.footer-content p{
+
+    margin:10px 0;
+
+    color:#cbd5e1;
+}
+
+
+
+/* ===================================
+        SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#e2e8f0;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--primary);
+
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#1d4ed8;
+}
+
+
+
+/* ===================================
+        EXTRA EFFECTS
+=================================== */
+
+.feature-card,
+.price-card,
+.step,
+.testimonial,
+button,
+.primary-btn,
+.secondary-btn,
+.nav-btn{
+
+    transition:all .35s ease;
+}
+
+.feature-card:hover,
+.price-card:hover,
+.step:hover,
+.testimonial:hover{
+
+    box-shadow:0 20px 35px rgba(0,0,0,.12);
+}
+
+button:hover{
+
+    cursor:pointer;
+}
+
+
+
+/* ===================================
+        MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+    .testimonial-container{
+
+        grid-template-columns:1fr;
+    }
+
+    .pricing-container{
+
+        grid-template-columns:1fr;
+    }
+
+    .feature-container{
+
+        grid-template-columns:1fr;
+    }
+
+    .steps{
+
+        grid-template-columns:1fr;
+    }
+
+    .companies{
+
+        justify-content:center;
+    }
+
+    .companies div{
+
+        font-size:18px;
+    }
+
+    .contact form{
+
+        width:100%;
+    }
+
+    footer{
+
+        padding:35px 15px;
+    }
+
+}
+
+
+
+/* ===================================
+        LARGE SCREEN
+=================================== */
+
+@media(min-width:1400px){
+
+    .navbar,
+    .hero,
+    .companies,
+    .feature-container,
+    .pricing-container,
+    .testimonial-container{
+
+        max-width:1350px;
+    }
+
+}
+
+
+
+/* ===================================
+        SELECTION COLOR
+=================================== */
+
+::selection{
+
+    background:#2563eb;
+
+    color:white;
+}
+
+.nav-links a.active{
+
+    color:#2563eb;
+
+    font-weight:700;
+}

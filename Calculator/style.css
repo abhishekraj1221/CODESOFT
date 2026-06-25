@@ -1,0 +1,234 @@
+/* ============================
+        RESET
+============================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    min-height:100vh;
+
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+}
+
+
+/* ============================
+        CALCULATOR
+============================ */
+
+.calculator{
+
+    width:380px;
+
+    background:#1e293b;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
+
+
+/* ============================
+        DISPLAY
+============================ */
+
+#display{
+
+    width:100%;
+    height:80px;
+
+    border:none;
+    outline:none;
+
+    border-radius:15px;
+
+    background:#0f172a;
+
+    color:#fff;
+
+    font-size:34px;
+
+    text-align:right;
+
+    padding:20px;
+
+    margin-bottom:25px;
+}
+
+#display::placeholder{
+
+    color:#94a3b8;
+}
+
+
+/* ============================
+        BUTTON GRID
+============================ */
+
+.buttons{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:15px;
+}
+
+
+/* ============================
+        BUTTONS
+============================ */
+
+button{
+
+    height:65px;
+
+    border:none;
+
+    border-radius:15px;
+
+    background:#334155;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.2);
+}
+
+button:hover{
+
+    background:#475569;
+
+    transform:translateY(-3px);
+}
+
+button:active{
+
+    transform:scale(.95);
+}
+
+
+/* ============================
+        OPERATOR
+============================ */
+
+.operator{
+
+    background:#2563eb;
+}
+
+.operator:hover{
+
+    background:#1d4ed8;
+}
+
+
+/* ============================
+        EQUAL
+============================ */
+
+.equal{
+
+    background:#16a34a;
+}
+
+.equal:hover{
+
+    background:#15803d;
+}
+
+
+/* ============================
+        ZERO BUTTON
+============================ */
+
+.zero{
+
+    grid-column:span 2;
+}
+
+
+/* ============================
+        RESPONSIVE
+============================ */
+
+@media(max-width:450px){
+
+    .calculator{
+
+        width:95%;
+        padding:20px;
+    }
+
+    button{
+
+        height:60px;
+
+        font-size:20px;
+    }
+
+    #display{
+
+        font-size:28px;
+
+        height:70px;
+    }
+}
+
+
+/* ============================
+        SCROLLBAR
+============================ */
+
+::-webkit-scrollbar{
+
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+}
+
+
+/* ============================
+        ANIMATION
+============================ */
+
+.calculator{
+
+    animation:popup .5s ease;
+}
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.8);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+    }
+}
